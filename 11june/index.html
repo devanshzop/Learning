@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  width: 25%;
+  padding: 20px;
+}
+
+.row:after {
+  content: "";
+  display: none;
+  clear: both;
+}
+
+@media screen and (max-width: 1025px) {
+  .column {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<div class="row">
+  <div class="column" style="background-color:pink">
+    1
+  </div>
+  
+  <div class="column" style="background-color: blue;">
+   2
+  </div>
+  
+  <div class="column" style="background-color: aqua;">
+ 3
+  </div>
+
+    <div class="column" style="background-color: blue;">
+        4
+  </div>
+  
+
+</div>
+
+</body>
+</html>
+
+

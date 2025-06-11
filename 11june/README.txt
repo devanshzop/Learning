@@ -43,9 +43,28 @@ CASING => The title attribute (and all other attributes) can be written with upp
 
 
 
+ACCESSIBILITY 
 
 
+Accessible Rich Internet Applications (ARIA) is a set of roles and attributes that define ways to make web content and web applications (especially those developed with JavaScript) more accessible to people with disabilities.
+(https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA)
+Example :
+ You see a track with a movable thumb, allowing you to select a value within a range
+-> Without ARIA (bad experience) : A screen reader lands on a <div> that looks like a slider. It might just say: "Group," or nothing at all,The user tries to use arrow keys, but nothing happens, or they might only move the page scroll. They have no idea what the current value is or how to interact with it.
+-> With ARIA (good Experience):  What a screen reader announces: "Volume, slider, 50."It recognizes it as a slider (role="slider"), knows its minimum (aria-valuemin), maximum (aria-valuemax), and current value (aria-valuenow). It knows it's interactive (tabindex="0") and what its purpose is (aria-label).
+User benefit: The user immediately knows it's a slider, what its range is, its current setting, and how to operate it using standard slider keyboard commands (like arrow keys).
 
+=> aria-label provides a textual description that assistive technologies can read when the visual label is missing or insufficien
 
+____________________________________________
+cobtainer 4 cards 
 
+tablet -2
+mobile 1 
+without using flex and grid and make it responsive
 
+read media queries , html and css
+
+order of specificoty like inline , important sudo elemt , sudo class
+
+bentogrid
