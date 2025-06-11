@@ -29,9 +29,17 @@ for absolute url we can just take the image address for relative url we must sav
 
 alt in <img> is alternate text
 
+lang attribute inside the <html> tag, to declare the language of the Web page.
+the first two characters define the language of the HTML page, and the last two characters define the country.
+like with html <html lang="hi-IN"> for hindi and INdia 
+Why Lang?
+Improve Search engine Optimization (SEO)
+=>They can more accurately determine the primary language of your page's content.
+=> This helps them serve your page to users who are searching in that specific language or who prefer content in that language, improving your page's relevance and ranking     
+=>Translation Services: Many browsers offer built-in translation features. The lang attribute allows the browser to correctly identify the original language of the page,
 
-new branch
 
+CASING => The title attribute (and all other attributes) can be written with uppercase or lowercase like title or TITLE. but html Standard Recommendation is to use lowercase
 
 
 
