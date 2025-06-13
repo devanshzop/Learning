@@ -134,3 +134,14 @@ userapi.fetchi("123");
 productrapi.fetchi("phone");
 
 
+// function fetchMessage (callback) {
+// setTimeout (() =>{
+// callback("replied: Hi!");
+// },2000);
+// }
+// console.log("Waiting for  reply...");
+// fetchMessage ((message) => {
+// console.log(message);
+// });
+
+
