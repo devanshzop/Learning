@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="./script.js" defer> </script>
+</head>
+
+<body>
+
+<h2>What Can JavaScript Do?</h2>
+
+<p id="demo">This should be changed</p>
+<button onclick='document.getElementById("demo").innerHTML="changed"'> Click</button>
+<br>
+
+<button type="button" onclick='document.getElementById("mimg").src="https://tblogqus.com/wp-content/uploads/2021/01/ZopSmart-Off-Campus-Drive-2020.png"'>ZopSM</button>
+
+<img id="mimg" src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_4c21c11231eb243644374e00ec085753/zopdev.png" alt="zop" style="width: 100px;">
+
+<button type="button" onclick='document.getElementById("mimg").src="https://images.g2crowd.com/uploads/product/image/social_landscape/social_landscape_4c21c11231eb243644374e00ec085753/zopdev.png "'>Zopdev</button>
+
+
+<br><br>
+<hr>
+<br>
+<button type="button" onclick="myfunction()">Click Here</button>
+<!-- The function is invoked (called) when a button is clicked: -->
+<br>
+
+<p id='demo2'> </p>
+
+<button type="button" onclick="document.write(5 + 6)">Try it</button>
+<!-- The document.write() method should only be used for testing.
+Using document.write() after an HTML document is loaded, will delete all existing HTML: -->
+
+<button onclick="alert(6+7)">Alert</button>
+<!-- You can skip the window keyword. -->
+<!-- In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional: -->
+
+
+<button onclick="window.print()"> Print the page</button>
+
+<br><br>
+<button onclick="document.getElementById('maths').innerHTML=maths(4,5)">do the maths</button>
+<div id="maths"></div>
+
+
+</body>
+</html>

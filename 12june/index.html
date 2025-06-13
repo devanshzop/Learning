@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-IN">
+
+<head>
+    <title>Bento</title>
+
+    <style>
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            padding: 20px;
+            background-color: aqua;
+            border-radius: 10px;
+            box-shadow: 1px 5px 7px;
+        }
+
+        .bento-item {
+            background-color: bisque;
+            padding: 20px;
+            border-radius: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items:flex-start ;
+            box-shadow: 1px 4px 3px;
+
+        }
+        .bento-item p{
+            flex-grow: 1;
+        }
+
+        .item-1 {
+            grid-column: span 2;
+            
+        }
+        .item-2{
+            grid-row: span 2;
+        }
+
+    </style>
+
+<body>
+
+    <h1>Bento Grid</h1>
+    <div class="bento-grid">
+        <div class="bento-item">
+            <h3>Bento</h3>
+            <p>This is 1st part of bento grid</p>
+        </div>
+
+        <div class="bento-item item-1">
+            <h3>Bento</h3>
+            <p>This ITEM 1</p>
+        </div>
+
+        <div class="bento-item item-2">
+            <h3>Bento</h3>
+            <p>This is ITEM2 of bento grid</p>
+        </div>
+
+           <div class="bento-item">
+            <h3>Bento</h3>
+            <p>This is 1st part of bento grid</p>
+        </div>
+
+           <div class="bento-item">
+            <h3>Bento</h3>
+            <p>This is 1st part of bento grid</p>
+        </div>
+
+               <div class="bento-item item-1">
+            <h3>Bento</h3>
+            <p>This is 1st part of bento grid</p>
+        </div>
+
+    </div>
+
+
+</body>
+</head>
+
+</html>
