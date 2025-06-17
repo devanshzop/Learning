@@ -1,13 +1,16 @@
 
+* {
+    box-sizing: border-box;
+}
+
 html {
-  scroll-behavior: smooth;
+    scroll-behavior: smooth;
 }
 
 .container {
     max-width: 100%;
     margin: 0 auto;
     padding: 40px 20px;
-    
 }
 
 .header {
@@ -17,24 +20,18 @@ html {
     margin-bottom: 60px;
     padding: 20px;
     border-radius: 8px;
-    
 }
 
 .header-u {
     padding-left: 90px;
     padding-right: 90px;
-  
-
-
 }
 
 .header-up {
     font-size: 40px;
     margin-bottom: 15px;
     font-weight: 400;
-      color: rgb(34, 34, 34);
-
-
+    color: rgb(34, 34, 34);
 }
 
 .header-bottom {
@@ -42,34 +39,36 @@ html {
     line-height: 20px;
     font-size: 20px;
     font-weight: 400;
-      color: rgb(95, 95, 95);
+    color: rgb(95, 95, 95);
+}
 
+.header-image {
+    max-width:20%; 
+    height: auto;
 }
 
 .search-section {
     margin-bottom: 40px;
-
 }
 
 .search-section h2 {
     font-size: 20px;
-
     color: rgb(61, 60, 60);
     font-weight: 300;
     letter-spacing: 0.05em;
     margin-bottom: 1rem;
 }
 
-.search-section h2 {
+
+/* .search-section h2 {
     font-size: 1.5rem;
     margin-bottom: 20px;
     color: #1a1a1a;
-}
+} */
 
 .search-bar {
     position: relative;
     width: 95%;
-
 }
 
 .search-bar input {
@@ -95,28 +94,21 @@ html {
     font-size: 16px;
 }
 
-.main-content {
-    display: flex;
-    gap: 40px;
-}
-
 
 .category-box {
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
-
-
 }
 
 .categories-sidebar {
-    width: 20%;
-    margin-left: 30px;
-  
-
+  position: sticky;
+  top: 100px; 
+  width: 20%;
+  margin-left: 30px;
+  align-self: flex-start; 
+  margin-bottom: 80px;
 }
-
-
 .sidebar-heading {
     font-size: 20px;
     font-weight: 500;
@@ -131,7 +123,6 @@ html {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-
 }
 
 .category-link {
@@ -153,9 +144,7 @@ html {
     margin-left: 90px;
     background: #f8f8f8;
     margin-bottom: 50px;
-
     border-radius: 30px;
-
 }
 
 .applications-heading {
@@ -173,10 +162,6 @@ html {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 50px;
-
-
-
-
 }
 
 .application-box {
@@ -187,26 +172,18 @@ html {
     height: 180px;
     padding: 3px;
     background: white;
-     box-sizing:border-box;
-    /* border-style:solid; */
     border-width: 0.8px;
     border-radius: 17px;
     overflow: hidden;
-     
-
 }
 
-.application-box:hover{
-  border-style:solid;
- 
-    
-  
+.application-box:hover {
+    border-style: solid;
 }
 
 .application-text {
     width: 180px;
     height: 115px;
-
     overflow: hidden;
 }
 
@@ -221,50 +198,38 @@ html {
     margin-right: 10px;
     border-radius: 11px;
     border-width: 0.5px;
-     display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-   
 }
 
-.application-image img{
+.application-image img {
     width: 40px;
     height: 40px;
-  display: flex;
+    display: flex;
     justify-content: center;
     align-items: center;
-  
-
 }
-
 
 .application-text h3 {
     margin-bottom: -6px;
     margin-top: 12px;
     font-size: 25px;
     font-weight: 500;
-
     letter-spacing: 0.05em;
     color: rgb(39, 39, 39);
-
-
-
 }
 
 .application-text p {
-     font-size: 14px;
-      letter-spacing: 0.05em;
+    font-size: 14px;
+    letter-spacing: 0.05em;
 }
-
 
 .datastore-box-parent {
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 80px;
-
-
-
 }
 
 .middle {
@@ -273,36 +238,14 @@ html {
     padding-right: 100px;
     padding-top: 50px;
     border-radius: 8px;
-
-
-
 }
 
-/* <img src="https://framerusercontent.com/images/1tMwCNL8nyVYanLeO1YXCmyD8.svg" style="width: 30px; height: 30px; border:1px; border-style:solid ; padding: 5px; margin: 5px; margin-bottom: 80px; border-radius: 9px;"></img> */
-
-
-
 .observability-box-parent {
-
     display: grid;
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
     margin-bottom: 50px;
-
-
 }
-
-/* .faq{
-
-    width: 100%;
-            background-color: #ffffff; 
-            padding: 30px;
-            border-radius: 12px;
-          
-            box-sizing: border-box;
-} */
-
-
 
 .faq-container {
     width: 100%;
@@ -310,7 +253,6 @@ html {
     padding: 90px;
     border-radius: 12px;
     box-sizing: border-box;
-
 }
 
 .faq-header h1 {
@@ -326,7 +268,6 @@ html {
     line-height: 1.5;
 }
 
-
 .faq-item {
     margin-bottom: 15px;
     border: 1px solid #e0e0e0;
@@ -339,7 +280,6 @@ html {
 .faq-item:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
-
 
 .faq-question {
     display: flex;
@@ -359,7 +299,6 @@ html {
     background-color: #f0f0f0;
 }
 
-
 .faq-question .icon {
     font-size: 1.8em;
     line-height: 1;
@@ -367,12 +306,10 @@ html {
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-
 .faq-question.active .icon {
     color: #007bff;
-
+    transform: rotate(45deg);
 }
-
 
 .faq-answer {
     background-color: #ffffff;
@@ -385,10 +322,286 @@ html {
     line-height: 1.6;
 }
 
-
 .faq-answer.show {
     max-height: 200px;
     padding-top: 15px;
     padding-bottom: 15px;
+}
 
+/* responsive */
+
+@media (max-width: 1320px) {
+    .container {
+        padding: 30px 15px;
+    }
+
+    .header-u {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .middle {
+        padding-left: 50px;
+        padding-right: 50px;
+        padding-top: 40px;
+    }
+
+    .categories-sidebar {
+        margin-left: 20px;
+    }
+
+    .application-main {
+        margin-left: 60px;
+    }
+
+    .application-box-parent,
+    .datastore-box-parent,
+    .observability-box-parent {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .faq-container {
+        padding: 70px 50px;
+    }
+}
+
+
+@media (max-width: 920px) {
+    .container {
+        padding: 20px 10px;
+    }
+
+    .header {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .header-u {
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 20px;
+    }
+
+    .header-up {
+        font-size: 32px;
+    }
+
+    .header-bottom {
+        font-size: 16px;
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    .header-image {
+        max-width: 250px;
+        margin-left: 0;
+    }
+
+    .middle {
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top: 30px;
+    }
+
+    .search-bar {
+        width: 100%;
+    }
+
+    .category-box {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+   .categories-sidebar {
+    position: static;
+    width: 100%;
+    margin-left: 0;
+  }
+
+    .sidebar-heading {
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .category-navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 15px;
+        margin-bottom: 20px;
+    }
+
+    .category-link {
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    .application-main {
+        margin-left: 0;
+        padding: 15px;
+        border-radius: 20px;
+    }
+
+    .applications-heading {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+
+    .application-box-parent,
+    .datastore-box-parent,
+    .observability-box-parent {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+        gap: 15px;
+    }
+
+    .application-box {
+        width: 100%; 
+        height: auto; 
+        flex-direction: column; 
+        align-items: center;
+        text-align: center; 
+        padding: 10px;
+    }
+.categories-sidebar {
+    position: static;
+    width: 100%;
+    margin-left: 0;
+      margin-bottom: 0px;
+  }
+    .application-image {
+        margin: 10px auto 10px;
+        margin-right: 0; 
+        margin-bottom: 10px; 
+    }
+
+    .application-text {
+        width: auto; 
+        height: auto;
+    }
+
+    .application-text h3 {
+        font-size: 20px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        white-space: normal; 
+    }
+
+    .application-text p {
+        font-size: 12px;
+        -webkit-line-clamp: 3; 
+    }
+
+    .faq-container {
+        padding: 50px 30px;
+    }
+
+    .faq-header h1 {
+        font-size: 1.8em;
+    }
+
+    .faq-header p {
+        font-size: 0.9em;
+    }
+
+    .faq-question {
+        font-size: 1em;
+        padding: 15px;
+    }
+
+    .faq-answer.show {
+        max-height: 180px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+}
+
+
+@media (max-width: 480px) {
+    .header-up {
+        font-size: 28px;
+    }
+
+    .header-bottom {
+        font-size: 14px;
+        line-height: 1.3;
+    }
+
+    .header-image {
+        max-width: 200px;
+    }
+
+    .middle {
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-top: 20px;
+    }
+
+    .search-bar input {
+        padding: 10px 14px 10px 40px;
+    }
+
+    .search-bar::before {
+        left: 12px;
+    }
+
+    .application-box-parent,
+    .datastore-box-parent,
+    .observability-box-parent {
+        grid-template-columns: 1fr; 
+        gap: 10px;
+    }
+
+    .application-box {
+        padding: 8px;
+    }
+
+    .application-image {
+        width: 30px;
+        height: 30px;
+        padding: 5px;
+    }
+
+    .application-text h3 {
+        font-size: 16px;
+    }
+
+.categories-sidebar {
+    position: static;
+    width: 100%;
+    margin-left: 0;
+      margin-bottom: 0px;
+  }
+
+    .application-text p {
+        font-size: 12px;
+        -webkit-line-clamp: 4; 
+    }
+
+    .faq-container {
+        padding: 30px 15px;
+    }
+
+    .faq-header h1 {
+        font-size: 1.3em;
+    }
+
+    .faq-header p {
+        font-size: 0.85em;
+    }
+
+    .faq-question {
+        font-size: 0.9em;
+        padding: 12px;
+    }
+
+    .faq-answer.show {
+        max-height: 100px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+    }
 }

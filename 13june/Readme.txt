@@ -130,3 +130,14 @@ In JavaScript, a prototype is a mechanism that enables objects to inherit proper
 from other objects. Each object in JavaScript has a hidden property called prototype, which can either point 
 to another object or be null. This creates a prototype chain, allowing objects to access properties and methods defined 
 in their prototypes.
+
+
+____________________________________________
+
+  /* Center content horizontally */
+    justify-content: center;
+
+    /* Center content vertically */
+    align-items: center;
+
+____________________________________________
