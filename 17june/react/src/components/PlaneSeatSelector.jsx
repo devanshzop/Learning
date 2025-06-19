@@ -1,72 +1,48 @@
 import React, { useState } from "react";
 import SeatGrid from "./SeatGrid";
-import SelectedSeatList from "./SelectedSeatList";
-import SeatGridb from "./Seatb";
-
+import ToggleGender from "./ToggleGender";
 
 const PlaneSeatSelector = () => {
   const [selectedSeats, setSelectedSeats] = useState({});
-  const [selectedSeats2, setSelectedSeats2] = useState({});
-  const [seatType, setSeatType] = useState("male");
+  const [gender, setGender] = useState("male");
 
-
-  const toggleSeat = (seatId) => {
-    setSelectedSeats((prev) => {   
-      if (prev[seatId] && prev[seatId].type === seatType) {
-        console.log(prev[seatId]);
-        const updated = { ...prev };
-        delete updated[seatId];
-        return updated;
+  const handleSeatClick = (seatId, section) => {
+    setSelectedSeats((prev) => {
+      const newSelection = { ...prev };
+      if (newSelection[seatId]) {
+        delete newSelection[seatId];
       } else {
-        return {
-          ...prev,
-          [seatId]: { type: seatType },
-        }; 
-        
+        newSelection[seatId] = { gender, section };
       }
+      return newSelection;
     });
   };
-
-   const toggleSeat2 = (seatId) => {
-    setSelectedSeats2((prev) => {   
-      if (prev[seatId] && prev[seatId].type === seatType) {
-        console.log(prev[seatId]);
-        const updated = { ...prev };
-        delete updated[seatId];
-        return updated;
-      } else {
-        return {
-          ...prev,
-          [seatId]: { type: seatType },
-        }; 
-        
-      }
-    });
-  };
-
 
   return (
-    <div className="p-4 max-w-md mx-auto bg-white rounded shadow">
-      <h2 className="text-xl font-bold text-center mb-4"> Plane Seat Selector</h2>
+    <div className="p-4 space-y-6">
+      <h2 className="text-xl font-bold">Plane Seat Selection</h2>
 
-      <div className="mb-4">
-        <label className="block font-medium mb-1">Select Type:</label>
-        <select
-          value={seatType}
-          onChange={(e) => setSeatType(e.target.value)}
-          className="w-full p-2 border rounded"
-        >
-          <option value="male">Male</option>
-          <option value="female">Female</option>
-        </select>
-      </div>
+      <ToggleGender gender={gender} setGender={setGender} />
 
-      <SeatGrid selectedSeats={selectedSeats} toggleSeat={toggleSeat} />
+      <h3 className="font-semibold">Business Class</h3>
+      <SeatGrid
+        rows={3}
+        columns={6}
+        startRow={1}
+        selectedSeats={selectedSeats}
+        handleSeatClick={handleSeatClick}
+        section="business"
+      />
 
-       <h2 className="text-xl font-bold text-center mb-4"> Business Class</h2>
- <SeatGridb selectedSeats={selectedSeats2} toggleSeat={toggleSeat2} />
-
-      {/* <SelectedSeatList selectedSeats={selectedSeats} /> */}
+      <h3 className="font-semibold mt-6">Economy Class</h3>
+      <SeatGrid
+        rows={10}
+        columns={6}
+        startRow={4}
+        selectedSeats={selectedSeats}
+        handleSeatClick={handleSeatClick}
+        section="economy"
+      />
     </div>
   );
 };

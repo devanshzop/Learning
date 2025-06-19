@@ -1,43 +1,41 @@
 import React from "react";
 import Seat from "./Seat";
 
-const ROWS = 6;
-const COLUMNS = 4;
-const SEAT_LETTERS = ["A", "B", "C", "D"];
+const SeatGrid = ({
+  rows,
+  columns,
+  startRow,
+  selectedSeats,
+  handleSeatClick,
+  section,
+}) => {
+  const seatLetters = ["WA", "B", "C", "D", "E","WF"];
 
-const SeatGrid = ({ selectedSeats, toggleSeat }) => {
-  const renderRows = () => {
-    const rows = [];
-
-    for (let row = 1; row <= ROWS; row++) {
-      const rowSeats = [];
-
-      for (let col = 0; col < COLUMNS; col++) {
-        const seatId = `${SEAT_LETTERS[col]}${row}`;
-        const type = selectedSeats[seatId]?.type || null;
-
-        rowSeats.push(
-          <Seat
-            key={seatId}
-            seatId={seatId}
-            seatType={type}
-            toggleSeat={toggleSeat}
-          />
+  return (
+    <div className="space-y-2">
+      {[...Array(rows)].map((_, rowIndex) => {
+        const rowNumber = startRow + rowIndex;
+        return (
+          <div key={rowNumber} className="flex items-center gap-4">
+            {seatLetters.map((letter, colIndex) => {
+              const seatId = `${rowNumber}${letter}`;
+              const isAisle = colIndex === 3;
+              return (
+                <React.Fragment key={seatId}>
+                  {isAisle && <div className="w-6" />} 
+                  <Seat
+                    seatId={seatId}
+                    selected={selectedSeats[seatId]}
+                    onClick={() => handleSeatClick(seatId, section)}
+                  />
+                </React.Fragment>
+              );
+            })}
+          </div>
         );
-      }
-   
-      
-      rows.push(
-        <div key={row} className="flex justify-center">
-          {rowSeats}
-        </div>
-      );
-    }
-
-    return rows;
-  };
-
-  return <div>{renderRows()}</div>;
+      })}
+    </div>
+  );
 };
 
 export default SeatGrid;

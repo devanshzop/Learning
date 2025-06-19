@@ -5,9 +5,9 @@ const SelectedSeatList = ({ selectedSeats }) => {
 
   return (
     <div className="mt-4">
-      <h3 className="">Selected Seats:</h3>
+     
       {entries.length === 0 ? (
-        <p>None</p>
+        <p></p>
       ) : (
         <ul className="list-disc ml-5">
           {entries.map(([seatId, { type }]) => (
